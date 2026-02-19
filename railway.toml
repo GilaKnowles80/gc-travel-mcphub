@@ -1,0 +1,11 @@
+# Railway deployment config for GC Travel MCP Server
+# Railway will auto-detect this and use it for deployment
+
+[build]
+builder = "nixpacks"
+
+[deploy]
+startCommand = "npm start"
+healthcheckPath = "/"
+healthcheckTimeout = 30
+restartPolicyType = "on_failure"
